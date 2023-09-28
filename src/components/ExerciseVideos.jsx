@@ -24,10 +24,10 @@ const ExerciseVideos = ({ exerciseVideos, name }) => {
         alignItems="center"
         sx={{
           flexDirection: { lg: "row" },
-          gap: { lg: "10px", xs: "20px" },
+          gap: { lg: "20px", xs: "20px" },
         }}
       >
-        {exerciseVideos?.slice(0, 4).map((item, index) => (
+        {exerciseVideos?.slice(0, 5).map((item, index) => (
           <a
             key={index}
             className="exercise-videoo"
@@ -37,7 +37,7 @@ const ExerciseVideos = ({ exerciseVideos, name }) => {
             rel="noreferrer"
           >
             <img src={item.video.thumbnails[0].url} alt={item.video.title} style={{
-              height:'200px', width:'400px' , objectFit:'scale-down', justifyContent:'center',
+              height:'200px', width:'300px' , objectFit:'scale-down', justifyContent:'center',
               alignItems:'center'
             }}/>
             <Box>
@@ -48,7 +48,7 @@ const ExerciseVideos = ({ exerciseVideos, name }) => {
                 width="300px"
                 textOverflow="hidden"
                 overflow="hidden"
-                ml='26px'
+                ml='6px'
               >
                 {item.video.title}
               </Typography>
@@ -59,7 +59,7 @@ const ExerciseVideos = ({ exerciseVideos, name }) => {
                 width="300px"
                 textOverflow="hidden"
                 overflow="hidden"
-                ml='26px'
+                ml='6px'
               >
                 {item.video.channelName}
               </Typography>
